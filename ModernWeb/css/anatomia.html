@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Anatomia CSS</title>
+		<style>
+			.selector {
+				color: #fff;
+				font-size: 30px;
+				text-align: center;
+				/* multiplos valores */
+				border: solid 5px navy; /* Shorthand property */
+				font-family: Helvetica,
+					sans-serif
+						/* Ele tenta a primeira se não tiver ele vai para a segunda */;
+
+				/* Funções */
+				width: calc(100% - 100px);
+				background-color: rgb(34, 153, 189);
+			}
+
+			/* Usando uma pseudo-classe Acessado via : */
+			.selector:hover {
+				background-color: orangered;
+			}
+
+			/* Exemplo de Pseudo-Elemento Acessado via :: */
+			.selector::first-letter {
+				font-size: 60px;
+                font-weight: bold;
+			}
+
+            /* PAdrão de nomenclatura mais utiliado: */
+            /* Pode ser utilizado CamelCase contante que use consistência */
+		</style>
+	</head>
+
+	<body>
+		<div class="selector">Conteúdo</div>
+	</body>
+</html>

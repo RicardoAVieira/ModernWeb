@@ -1,0 +1,101 @@
+<div wm-slider>
+	<p id="1">
+		<img
+			src="http://files.cod3r.com.br/curso-web/imagem1.jpg"
+			alt="Ondas quebrando na praia"
+			width="513"
+			height="342"
+			title="Ondas quebrando nas pedras em uma praia"
+		/>
+	</p>
+
+	<p id="2">
+		<img
+			src="http://files.cod3r.com.br/curso-web/imagem2.gif"
+			alt="Intro Cod3r"
+			height="342"
+		/>
+	</p>
+
+	<p class="circular" id="3">
+		<img
+			src="http://files.cod3r.com.br/curso-web/imagem3.png"
+			alt="Rio de Janeiro"
+			height="342"
+		/>
+	</p>
+
+	<p class="texto" id="4">
+		<img
+			src="http://files.cod3r.com.br/curso-web/avatar.jpg"
+			alt="Avatar"
+			height="50"
+			align="left"
+		/>
+		Texto sdfsdf AjhADJKhasdkjAÇASKÇJDça asjkçdhAAS Dasdwer we werwer wer
+		werwerwer wer wer wer wer AASwer we r wer wer werwer wer wer wer
+		sedqwerewqrqwe er qwer werwer wqer wer we rw erqwerqwerqwe r
+	</p>
+	<p class="cidade" id="5"></p>
+
+	<p id="6">
+		<picture>
+			<source
+				srcset="http://files.cod3r.com.br/curso-web/logo-larga.png"
+				media="(min-width: 600px)"
+			/>
+			<img
+				src="http://files.cod3r.com.br/curso-web/logo-estreita.png"
+				alt="Logo"
+			/>
+		</picture>
+	</p>
+</div>
+<script>
+	function posicionaImagem(id, position) {
+		resultado = document.getElementById(
+			`${id}`
+		).style.marginLeft = `${position}%`;
+		console.log(position)
+	}
+	function loopImagem(id) {
+		for (var i; i < 50; i++) {
+			 return i
+
+		}
+		console.log("Passei aqui3"+i)
+	}
+	function tornaVisivel(id) {
+		document.getElementById(`${id}`).style.display = "inline";
+		loopImagem(id);
+		console.log("Passei aqui")
+	}
+
+	tornaVisivel("1");
+</script>
+
+<style>
+	p {
+		position: absolute;
+		display: none;
+	}
+
+	p .circular {
+		width: 513;
+		background-color: #444;
+	}
+	.texto {
+		width: 400px;
+	}
+	.texto img {
+		margin: 0px 12px 2px 0px;
+	}
+	.cidade {
+		width: 513px;
+		height: 342px;
+		background-image: url("http://files.cod3r.com.br/curso-web/imagem4.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+</style>

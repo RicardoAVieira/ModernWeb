@@ -19,18 +19,15 @@ l.then(function (valor) {
 	console.log(valor);
 });
 
+const primeiroElemento = (array) => array[0];
+const primeiraLetra = (string) => string[0];
+const letraMinuscula = (letra) => letra.toLowerCase();
+
 //Passando via Arrow Function
-let a = new Promise(function (cumprirPromessaArrow) {
-	cumprirPromessaArrow(["Ana", "Bia", "Carlos", "Daniel"]);
-});
-
-function primeiroElemento(array){
-    return array[0]
-}
-
-a.then((valor) => valor[0])
-	.then((primeiroNome) => primeiroNome[0])
-	.then((primeiraLetra) => primeiraLetra.toLowerCase())
-	.then((letraMinuscula) => console.log(letraMinuscula));
-
-
+new Promise(function (resolve) {
+	resolve(["Ana", "Bia", "Carlos", "Daniel"]);
+})
+	.then(primeiroElemento)
+	.then(primeiraLetra)
+	.then(letraMinuscula)
+	.then(console.log);
