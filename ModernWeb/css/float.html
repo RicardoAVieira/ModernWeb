@@ -11,18 +11,31 @@
 
         .c1 {
             background-color: red;
+
+            /* Flutuando alinhado a direita ou esquerda */
+            float: right;
         }
 
         .c2 {
+            /* Utilizado para considerar o espaçõ utilizado no float */
+            clear: right;
+            float: left;
             background-color: green;
         }
         
         .c3 {
             background-color: blue;
+            /* Both é utilizado para limpar a direita e a esquerda */
+            clear: both;
         }
 
         .c4 {
             background-color: orange;
+            float: right;
+        }
+        div{
+            height: 150px;
+            width: 150px;
         }
     </style>
 </head>
