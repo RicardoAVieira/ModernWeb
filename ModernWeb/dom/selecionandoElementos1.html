@@ -10,7 +10,24 @@
     <div>Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
     <script>              
-        // ...
+        /* Como ele espera um ID não precisa do # */
+        document.getElementById('primeiro').classList.add('destaque')
+
+        /* 
+        Como resumo, foram apresentadas 3 formas de importar os elementos do HTML
+        e por seguindo formas de transformar os elementos em Array, com spread e com um simples for.
+        */
+
+        const divs = document.getElementsByTagName('div')
+        Array.from(divs).forEach(e => e.classList.remove('destaque'))
+
+        const divsArray =[...divs]
+        divsArray.forEach(e=> e.classList.add('destaque'))
+
+        const ultimosElementos = document.getElementsByClassName('ultimo')
+        for(let e of ultimosElementos){
+            e.classList.remove('destaque')
+        }
     </script>
 </body>
 </html>
